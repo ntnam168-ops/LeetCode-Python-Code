@@ -5,3 +5,7 @@ class Solution:
             if list[i] == 10:
                 list[i] = 0
                 list[i - 1] += 1
+        if list[0] == 10:
+            list[0] = 0
+            list = [1] + list
+        return list
