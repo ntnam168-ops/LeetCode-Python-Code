@@ -5,11 +5,11 @@ class Solution:
 
         def back(pos, val):
             if pos == k + 1:
-                print(cur)
+                res.append(cur[:])
                 return
             
             for i in range(val, n - k + pos + 1):
-                cur[pos - 1] = val
+                cur[pos - 1] = i
                 back(pos + 1, i + 1)
         
         back(1, 1)
