@@ -1,8 +1,9 @@
 import sys
 
 input = sys.stdin.buffer.read
-
+write = sys.stdout.write
 data = list(map(int, input().split()))
+
 n, x = data[:2]
 t = data[2:2 + n]
 
