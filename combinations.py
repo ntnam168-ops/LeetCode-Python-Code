@@ -5,7 +5,7 @@ class Solution:
 
         def back(pos, val):
             if pos == k + 1:
-                res.append(cur[:])
+                print(cur)
                 return
             
             for i in range(val, n - k + pos + 1):
