@@ -1,8 +1,8 @@
 n, x = map(int, input().split())
 ar = list(map(int, input().split()))
 dp = [x + 1] * (x + 1)
-dp[0] = 0
 mod = 10 ** 9 + 7
+dp[0] = 0
 
 for val in ar:
     for i in range(val, x + 1):
