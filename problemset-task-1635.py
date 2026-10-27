@@ -19,4 +19,4 @@ for i in range(1, x + 1):
         dp[i] += dp[i - val]
     dp[i] %= mod
 
-print(dp[x])
+sys.stdout.write(dp[x])
