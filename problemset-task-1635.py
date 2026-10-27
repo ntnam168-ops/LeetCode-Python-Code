@@ -14,12 +14,11 @@ dp[0] = 1
 mod = 10 ** 9 + 7
 
 for i in range(1, x + 1):
-    total = 0
     for val in c:
         if val <= i:
-            total += dp[i - val]
+            dp[i] += dp[i - val]
         else:
             break
-    dp[i] = total % mod
+    dp[i] %= mod
 
 write(str(dp[x]) + '\n')
