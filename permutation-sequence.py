@@ -11,8 +11,7 @@ class Solution:
             pos = 0
             while k > d:
                 k -= d
-                ++pos
-                print(pos)
+                pos += 1
             res.append(nums[pos])
             del nums[pos]
             print(d, pos)
