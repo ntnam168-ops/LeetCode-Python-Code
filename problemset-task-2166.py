@@ -27,6 +27,8 @@ def build(id, l, r):
     build(id * 2 + 1, md + 1, r)
     ST[id] = max(ST[id * 2], ST[id * 2 + 1])
 
+build(1, 1, n)
+
 for _ in range(q):
     type = int(data[pos])
     pos += 1
