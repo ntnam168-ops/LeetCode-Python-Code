@@ -15,3 +15,4 @@ class Solution:
                 dis[u] += dis[v] + child[v]
 
         dfs(0, 0)
+        dfs1(0, 0)
