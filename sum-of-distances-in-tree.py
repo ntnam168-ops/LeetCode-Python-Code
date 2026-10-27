@@ -11,5 +11,7 @@ class Solution:
                 if v == p:
                     continue
                 dfs(v, u)
+                child[u] += child[v]
+                dis[u] += dis[v] + child[v]
 
         dfs(0, 0)
