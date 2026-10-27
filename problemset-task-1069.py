@@ -4,7 +4,6 @@ for i in range(1, len(s)):
     if s[i] == s[i - 1]:
         d += 1
     else:
-        print(s[i], s[i - 1])
         res = max(res, d)
         d = 1
 print(max(res, d))
