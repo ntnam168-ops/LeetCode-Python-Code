@@ -24,3 +24,5 @@ for i in range(1 << sz2):
         if (i >> j) & 1:
             s += t[sz1 + j]
     mp2[s] = mp2.get(s, 0) + 1
+
+res = 0
