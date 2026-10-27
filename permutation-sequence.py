@@ -16,6 +16,3 @@ class Solution:
             del nums[pos]
 
         return res
-
-s = Solution()
-print(s.getPermutation(4, 9))
