@@ -12,6 +12,7 @@ class Solution:
             while k > d:
                 k -= d
                 ++pos
+                print(pos)
             res.append(nums[pos])
             del nums[pos]
             print(d, pos)
