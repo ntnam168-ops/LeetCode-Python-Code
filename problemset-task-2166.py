@@ -66,6 +66,8 @@ for _ in range(q):
     pos += 1
     if type == 1:
         k, u = map(int, data[pos : pos + 2])
+        k -= 1
+        x[k] = u
         pos += 2
     else:
         a, b = map(int, data[pos : pos + 2])
