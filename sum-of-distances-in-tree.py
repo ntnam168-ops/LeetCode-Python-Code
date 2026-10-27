@@ -10,3 +10,5 @@ class Solution:
                 if v == p:
                     continue
                 dfs(v, u)
+
+        dfs(1, 0)
