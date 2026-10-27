@@ -10,4 +10,4 @@ for i in range(1, n + 1):
             break
         dp[i] = (dp[i] + dp[i - j]) % mod
 
-print(dp[n])
+print(int(dp[n]))
