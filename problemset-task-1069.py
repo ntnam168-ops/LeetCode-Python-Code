@@ -6,4 +6,5 @@ for i in range(1, len(s)):
     else:
         res = max(res, d)
         d = 1
+    print(d, end = " ")
 print(max(res, d))
