@@ -12,4 +12,8 @@ sz1 = n // 2
 sz2 = n - sz1
 
 for i in range(1 << sz1):
-    print(i)
+    s = 0
+    for j in range(sz1):
+        if (i >> j) & 1:
+            s += t[j]
+    print(s)
