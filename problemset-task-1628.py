@@ -16,5 +16,5 @@ for v in t[:sz1]:
 for v in t[sz1 : n]:
     mp2 += [a + v for a in mp2]
 
-print(mp1)
-print(mp2)
+mp1.sort()
+mp2.sort()
