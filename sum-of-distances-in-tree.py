@@ -18,7 +18,8 @@ class Solution:
             for v in adj[u]:
                 if v == p:
                     continue
-                
+
+                dfs1(v, u)
 
         dfs(0, 0)
         dfs1(0, 0)
