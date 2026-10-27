@@ -71,5 +71,5 @@ for _ in range(q):
         pos += 2
     else:
         a, b = map(int, data[pos : pos + 2])
-        print(get(1, 1, n, a, b))
+        write(str(get(1, 1, n, a, b)) + '\n')
         pos += 2
