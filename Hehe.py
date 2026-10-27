@@ -1,2 +1,0 @@
-print("UwU")
-print("OOO")
