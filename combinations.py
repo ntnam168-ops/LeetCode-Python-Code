@@ -7,6 +7,6 @@ class Solution:
             for i in range(val, n - k + pos + 1):
                 cur[pos] = val
                 back(pos + 1, i + 1)
-        back(pos, 1)
+        back(1, 1)
 
         return res
