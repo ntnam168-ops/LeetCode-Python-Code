@@ -8,7 +8,7 @@ class Solution:
         res = []
         for i in range(n):
             d = gt[n - i - 1]
-            pos = -1
+            pos = 0
             while k > d:
                 k -= d
                 ++pos
