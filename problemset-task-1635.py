@@ -10,7 +10,7 @@ for i in range(1, x + 1):
             dp[i] = (dp[i] + dp[i - x]) % mod
     for j in range(1, x + 1):
         print(dp[j], end = " ")
-    pritn()
+    print()
 
 print(dp[x])
 
