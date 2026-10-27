@@ -16,8 +16,6 @@ pos += n
 for i in range(1, n):
     x[i] += x[i - 1]
 
-for i in range(1, n):
-    x[i] += x[i - 1]
 ST = [0] * (4 * n + 5)
 lz = [0] * (4 * n + 5)
 
