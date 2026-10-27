@@ -14,3 +14,5 @@ class Solution:
         
         back(1, 1)
         return res
+
+s = Solution()
