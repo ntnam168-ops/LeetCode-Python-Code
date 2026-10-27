@@ -43,4 +43,4 @@ while i < len(a) and j >= 0:
 
         res += cnt1 * cnt2
 
-print(res)
+write(str(res) + '\n')
