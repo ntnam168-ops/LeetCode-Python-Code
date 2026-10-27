@@ -11,9 +11,9 @@ sz1 = n // 2
 sz2 = n - sz1
 mp1, mp2 = [0], [0]
 
-for v in x[:sz1]:
+for v in t[:sz1]:
     mp1 += [a + v for a in mp1]
-for v in x[sz1 : n]:
+for v in t[sz1 : n]:
     mp2 += [a + v for a in mp2]
 
 print(mp1)
