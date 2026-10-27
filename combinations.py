@@ -16,3 +16,4 @@ class Solution:
         return res
 
 s = Solution()
+print(s.combine(5, 2))
