@@ -4,9 +4,13 @@ class Solution:
         cur = [0] * k
 
         def back(pos, val):
+            if pos == k + 1:
+                res.append(cur)
+                return
+            
             for i in range(val, n - k + pos + 1):
                 cur[pos] = val
                 back(pos + 1, i + 1)
+        
         back(1, 1)
-
         return res
