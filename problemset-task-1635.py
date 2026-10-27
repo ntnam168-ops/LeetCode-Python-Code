@@ -3,8 +3,8 @@ import sys
 input = sys.stdin.read
 data = input().split()
 
-n = data[0]
-x = data[1]
-c = [int(x) for x in range(2, 2 + n)]
+n = int(data[0])
+x = int(data[1])
+c = [int(data[i]) for i in range(2, 2 + n)]
 
 print(n, x, c)
