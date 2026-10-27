@@ -13,6 +13,7 @@ class Solution:
                 k -= d
                 ++pos
             res.append(nums[pos])
+            nums.revome(nums[pos])
 
         return res
 
