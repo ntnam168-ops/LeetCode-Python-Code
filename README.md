@@ -1,2 +1,2 @@
 # CSES-Python-Code
-This repository contains pyhon code at https://cses.fi/problemset/
+This repository contains pyhon code at https://leetcode.com/problemset/
