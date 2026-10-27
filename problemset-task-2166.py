@@ -66,8 +66,8 @@ for _ in range(q):
     pos += 1
     if type == 1:
         k, u = map(int, data[pos : pos + 2])
-        k -= 1
-        x[k] = u
+        update(1, 1, n, k, n, u - x_copy[k - 1])
+        x_copy[k - 1] = u
         pos += 2
     else:
         a, b = map(int, data[pos : pos + 2])
