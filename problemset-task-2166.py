@@ -16,6 +16,7 @@ pos += n
 for i in range(1, n):
     x[i] += x[i - 1]
 ST = [0] * (4 * n + 5)
+lz = [0] * (4 * n + 5)
 
 def build(id, l, r):
     if l == r:
@@ -25,8 +26,6 @@ def build(id, l, r):
     build(id * 2, l, md)
     build(id * 2 + 1, md + 1, r)
     ST[id] = max(ST[id * 2], ST[id * 2 + 1])
-
-def update(int id, int l, int r, )
 
 for _ in range(q):
     type = int(data[pos])
