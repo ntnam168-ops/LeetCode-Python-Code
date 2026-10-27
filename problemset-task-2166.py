@@ -13,6 +13,8 @@ pos += 1
 x = list(map(int, data[pos : pos + n]))
 x_copy = x[:]
 pos += n
+for i in range(1, n):
+    x[i] += x[i - 1]
 
 for i in range(1, n):
     x[i] += x[i - 1]
