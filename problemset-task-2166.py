@@ -11,6 +11,7 @@ pos += 1
 q = int(data[pos])
 pos += 1
 x = list(map(int, data[pos : pos + n]))
+x_copy = x[:]
 pos += n
 
 for i in range(1, n):
@@ -27,6 +28,37 @@ def build(id, l, r):
     build(id * 2 + 1, md + 1, r)
     ST[id] = max(ST[id * 2], ST[id * 2 + 1])
 
+def push(id, l, r):
+    if not lz[id]:
+        return
+    if l != r:
+        lz[id * 2] += lz[id]
+        lz[id * 2 + 1] += lz[id]
+    ST[id] += lz[id]
+    lz[id] = 0
+
+def update(id, l, r, x, y, val):
+    push(id, l, r)
+    if l > y or r < x:
+        return
+    if l >= x and r <= y:
+        lz[id] = val
+        push(id, l, r)
+        return
+    md = (l + r) // 2
+    update(id * 2, l, md, x, y, val)
+    update(id * 2 + 1, md + 1, r, x, y, val)
+    ST[id] = max(ST[id * 2], ST[id * 2 + 1])
+
+def get(id, l, r, x, y):
+    push(id, l, r)
+    if l > y or r < x:
+        return -10**18
+    if l >= x and r <= y:
+        return ST[id]
+    md = (l + r) // 2
+    return max(get(id * 2, l, md, x, y), get(id * 2 + 1, md + 1, r, x, y))
+    
 build(1, 1, n)
 
 for _ in range(q):
