@@ -5,3 +5,5 @@ dp = [1e9] * x
 for val in ar:
     for i in range(x, val - 1):
         dp[i] = min(dp[i], dp[i - x] + 1)
+
+print(-1 if dp[x] == 1e9 else dp[x])
