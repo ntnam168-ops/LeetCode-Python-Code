@@ -15,11 +15,19 @@ class Solution:
                 dis[u] += dis[v] + child[v]
 
         def dfs1(u, p):
+            res[u] = dis[u]
             for v in adj[u]:
                 if v == p:
                     continue
-
+                dis[u] -= (dis[v] + child[v])
+                child[u] -= child[v]
+                child[v] += child[u]
+                dis[v] += dis[u] + child[u]
                 dfs1(v, u)
+                dis[v] -= (dis[u] + child[u])
+                child[v] -= child[u]
+                child[u] += child[v]
+                dis[u] += dis[v] + child[v]
 
         dfs(0, 0)
         dfs1(0, 0)
