@@ -1,6 +1,6 @@
 n, x = map(int, input().split())
 ar = list(map(int, input().split()))
-dp = [1e9] * x
+dp = [1e9] * (x + 1)
 
 for val in ar:
     for i in range(x, val - 1):
