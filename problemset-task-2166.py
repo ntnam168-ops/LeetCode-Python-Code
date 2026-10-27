@@ -13,6 +13,9 @@ pos += 1
 x = list(map(int, data[pos : pos + n]))
 pos += n
 
+for i in range(1, n):
+    x[i] += x[i - 1]
+
 for _ in range(q):
     type = int(data[pos])
     pos += 1
