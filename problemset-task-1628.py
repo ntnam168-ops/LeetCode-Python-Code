@@ -29,4 +29,4 @@ res = 0
 for a, b in mp1.items():
     res += b * mp2.get(x - a, 0)
 
-print(res)
+write(str(res) + '\n')
