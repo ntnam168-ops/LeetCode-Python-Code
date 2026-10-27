@@ -1,7 +1,7 @@
 n = int(input())
 
 mod = 1e9 + 7
-dp = [int(0)] * (n + 1)
+dp = [0] * (n + 1)
 dp[0] = 1
 
 for i in range(1, n + 1):
