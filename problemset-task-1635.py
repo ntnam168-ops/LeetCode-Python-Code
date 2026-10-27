@@ -1,6 +1,7 @@
 import sys
 
 input = sys.stdin.read
+write = sys.stdout.write
 data = input().split()
 
 n = int(data[0])
@@ -19,4 +20,4 @@ for i in range(1, x + 1):
         dp[i] += dp[i - val]
     dp[i] %= mod
 
-sys.stdout.write(str(dp[x]))
+write(str(dp[x]))
