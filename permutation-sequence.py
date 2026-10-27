@@ -3,4 +3,5 @@ class Solution:
         nums, gt = [], [1]
         for i in range(1, n + 1):
             nums.append(i)
+            gt[i] = gt[i - 1] * i
         for i in range(n):
