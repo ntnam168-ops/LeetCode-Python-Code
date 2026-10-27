@@ -8,11 +8,10 @@ class Solution:
         res = []
         for i in range(n):
             d = gt[n - i - 1]
-            pos = 0
+            pos = -1
             while k > d:
                 k -= d
                 ++pos
-            print(d)
             res.append(nums[pos])
             del nums[pos]
 
