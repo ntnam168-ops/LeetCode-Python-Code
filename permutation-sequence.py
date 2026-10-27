@@ -14,6 +14,7 @@ class Solution:
                 ++pos
             res.append(nums[pos])
             del nums[pos]
+            print(d, pos)
 
         return res
 
