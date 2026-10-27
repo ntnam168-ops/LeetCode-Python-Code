@@ -16,4 +16,4 @@ for i in range(1 << sz1):
     for j in range(sz1):
         if (i >> j) & 1:
             s += t[j]
-    print(s)
+    mp1[s] = mp1.get(s, 0) + 1
