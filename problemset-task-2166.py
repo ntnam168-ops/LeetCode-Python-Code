@@ -56,7 +56,7 @@ def get(id, l, r, x, y):
         return 0
     push(id, l, r)
     if l > y or r < x:
-        return -10**18
+        return 0
     if l >= x and r <= y:
         return ST[id]
     md = (l + r) // 2
@@ -74,5 +74,5 @@ for _ in range(q):
         pos += 2
     else:
         a, b = map(int, data[pos : pos + 2])
-        write(str(get(1, 1, n, a, b) - get(1, 1, n, a - 1, a - 1)) + '\n')
+        write(str(max(0, get(1, 1, n, a, b) - get(1, 1, n, a - 1, a - 1))) + '\n')
         pos += 2
