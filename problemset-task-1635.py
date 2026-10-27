@@ -5,9 +5,9 @@ mod = 10 ** 9 + 7
 dp[0] = 1
 
 for i in range(1, x + 1):
-    for x in ar:
-        if x <= i:
-            dp[i] = (dp[i] + dp[i - x]) % mod
+    for v in ar:
+        if v <= i:
+            dp[i] = (dp[i] + dp[i - v]) % mod
     for j in range(1, x + 1):
         print(dp[j], end = " ")
     print()
