@@ -4,3 +4,10 @@ dp = [0] * (x + 1)
 mod = 10 ** 9 + 7
 dp[0] = 1
 
+for i in range(1, x + 1):
+    for x in ar:
+        if x <= i:
+            dp[i] = (dp[i] + dp[i - x]) % mod
+
+print(dp[x])
+
