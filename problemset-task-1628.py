@@ -12,9 +12,9 @@ sz2 = n - sz1
 mp1, mp2 = [0], [0]
 
 for v in x[:sz1]:
-    mp1 += [x + v for x in mp1]
+    mp1 += [a + v for a in mp1]
 for v in x[sz1 : n]:
-    mp2 += [x + v for x in mp2]
+    mp2 += [a + v for a in mp2]
 
 print(mp1)
 print(mp2)
