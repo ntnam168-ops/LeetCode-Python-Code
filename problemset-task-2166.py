@@ -21,7 +21,7 @@ lz = [0] * (4 * n + 5)
 
 def build(id, l, r):
     if l == r:
-        ST[id] = x[l]
+        ST[id] = x[l - 1]
         return
     md = (l + r) // 2
     build(id * 2, l, md)
