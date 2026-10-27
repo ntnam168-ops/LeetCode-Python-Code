@@ -26,7 +26,7 @@ for i in range(1 << sz2):
     mp2[s] = mp2.get(s, 0) + 1
 
 res = 0
-for a, b in mp1:
+for a, b in mp1.items:
     res += b * mp2.get(x - a)
 
 print(res)
