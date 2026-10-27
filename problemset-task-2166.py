@@ -73,5 +73,5 @@ for _ in range(q):
         pos += 2
     else:
         a, b = map(int, data[pos : pos + 2])
-        write(str(max(0, get(1, 1, n, a, b) - get(1, 1, n, a - 1, a - 1))) + '\n')
+        write(str(max(0, get(1, 1, n, a, b))) + '\n')
         pos += 2
