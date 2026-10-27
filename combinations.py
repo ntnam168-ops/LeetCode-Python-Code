@@ -9,7 +9,7 @@ class Solution:
                 return
             
             for i in range(val, n - k + pos + 1):
-                cur[pos] = val
+                cur[pos - 1] = val
                 back(pos + 1, i + 1)
         
         back(1, 1)
