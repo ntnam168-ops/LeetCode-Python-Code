@@ -5,7 +5,7 @@ class Solution:
             nums.append(i)
             gt.append(gt[-1] * i) 
     
-        res = []
+        res = ""
         for i in range(n):
             d = gt[n - i - 1]
             pos = 0
