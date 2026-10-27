@@ -3,7 +3,7 @@ class Solution:
         nums, gt = [], [1]
         for i in range(1, n + 1):
             nums.append(i)
-            gt[i].append(gt[-1] * i)
+            gt.append(gt[-1] * i)
         print(gt)
 
 s = Solution()
