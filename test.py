@@ -1,1 +1,1 @@
-asasasa
+print("?")
