@@ -1,3 +1,7 @@
 n, x = map(int, input().split())
 ar = list(map(int, input().split()))
 dp = [1e9] * x
+
+for val in ar:
+    for i in range(x, val - 1):
+        dp[i] = min(dp[i], dp[i - x] + 1)
