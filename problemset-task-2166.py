@@ -10,10 +10,12 @@ n = int(data[pos])
 pos += 1
 q = int(data[pos])
 pos += 1
-x = [int(data[i]) for i in range(pos, pos + n)]
+x = list(map(int, data[pos : pos + n]))
 pos += n
 
 for _ in range(q):
     type = int(data[pos])
     pos += 1
-    
+    if type == 1:
+        k, u = map(int, data[pos : pos + 2])
+        pos + =2
