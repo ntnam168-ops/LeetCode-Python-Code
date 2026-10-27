@@ -27,6 +27,6 @@ for i in range(1 << sz2):
 
 res = 0
 for a, b in mp1.items():
-    res += b * mp2.get(x - a)
+    res += b * mp2.get(x - a, 0)
 
 print(res)
