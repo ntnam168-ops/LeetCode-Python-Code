@@ -52,6 +52,8 @@ def update(id, l, r, x, y, val):
     ST[id] = max(ST[id * 2], ST[id * 2 + 1])
 
 def get(id, l, r, x, y):
+    if x < 1:
+        return 0
     push(id, l, r)
     if l > y or r < x:
         return -10**18
