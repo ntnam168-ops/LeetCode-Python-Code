@@ -12,4 +12,4 @@ class Solution:
                     continue
                 dfs(v, u)
 
-        dfs(1, 0)
+        dfs(0, 0)
