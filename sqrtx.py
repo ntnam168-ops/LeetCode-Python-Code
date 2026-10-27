@@ -8,5 +8,3 @@ class Solution:
             else:
                 r = md
         return l
-s = Solution()
-print(s.mySqrt(10))
