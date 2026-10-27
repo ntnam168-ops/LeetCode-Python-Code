@@ -14,7 +14,13 @@ class Solution:
                 child[u] += child[v]
                 dis[u] += dis[v] + child[v]
 
-
+        def dfs1(u, p):
+            for v in adj[u]:
+                if v == p:
+                    continue
+                
 
         dfs(0, 0)
         dfs1(0, 0)
+
+        return res
