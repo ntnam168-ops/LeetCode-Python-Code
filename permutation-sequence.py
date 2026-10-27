@@ -5,3 +5,6 @@ class Solution:
             nums.append(i)
             gt[i] = gt[i - 1] * i
         print(gt[i])
+
+s = Solution()
+print(s.getPermutation(4, 9))
