@@ -17,3 +17,10 @@ for i in range(1 << sz1):
         if (i >> j) & 1:
             s += t[j]
     mp1[s] = mp1.get(s, 0) + 1
+
+for i in range(1 << sz2):
+    s = 0
+    for j in range(sz2):
+        if (i >> j) & 1:
+            s += t[sz1 + j]
+    mp1[s] = mp1.get(s, 0) + 1
