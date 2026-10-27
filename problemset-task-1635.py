@@ -8,9 +8,6 @@ for i in range(1, x + 1):
     for v in ar:
         if v <= i:
             dp[i] = (dp[i] + dp[i - v]) % mod
-    for j in range(1, x + 1):
-        print(dp[j], end = " ")
-    print()
 
 print(dp[x])
 
