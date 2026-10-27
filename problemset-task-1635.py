@@ -10,4 +10,3 @@ for i in range(1, x + 1):
             dp[i] = (dp[i] + dp[i - v]) % mod
 
 print(dp[x])
-
