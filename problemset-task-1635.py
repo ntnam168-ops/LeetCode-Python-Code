@@ -5,10 +5,8 @@ data = input().split()
 
 n = int(data[0])
 x = int(data[1])
-c = [int(data[i]) for i in range(2, 2 + n)].sort()
-print(c)
-
-exit(0)
+c = [int(data[i]) for i in range(2, 2 + n)]
+c.sort()
 
 dp = [0] * (x + 1)
 dp[0] = 1
