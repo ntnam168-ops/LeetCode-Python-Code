@@ -1,16 +1,3 @@
-n, x = map(int, input().split())
-ar = list(map(int, input().split()))
-dp = [0] * (x + 1)
-mod = 10 ** 9 + 7
-dp[0] = 1
-ar.sort()
+import sys
 
-for i in range(1, x + 1):
-    for v in ar:
-        if v <= i:
-            dp[i] += dp[i - v]
-        else:
-            break
-    dp[i] %= mod
-    
-print(dp[x])
+input = sys.stdin.read
