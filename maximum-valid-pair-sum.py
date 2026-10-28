@@ -3,7 +3,7 @@ class Solution:
         n = len(nums)
         res, pointer = 0, 0
         for i in range(n):
-        	while i >= k:
+        	if i >= k:
         		if nums[i - k] > nums[pointer]:
         			pointer = i - k
         	res = max(res, a[i] + a[pointer])
