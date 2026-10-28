@@ -5,5 +5,6 @@ class Solution:
 		for i in range(n):
 			if i >= k and nums[i - k] > nums[pointer]:
 				pointer = i - k
-			res = max(res, nums[i] + nums[pointer])
+			if i >= k:
+				res = max(res, nums[i] + nums[pointer])
 		return res
