@@ -9,10 +9,11 @@ class Solution:
 				if not i and not j:
 					continue
 				if not i:
-					# for val in dp[i][j - 1]:
-						# dp[i][j].add(val ^ grid[i][j])
+					for val in dp[i][j - 1]:
+						dp[i][j].add(val ^ grid[i][j])
 				elif not j:
-					
+					for val in dp[i - 1][j]:
+						dp[i][j].add(val ^ grid[i][j])
 				else:
 				
 		return 1
