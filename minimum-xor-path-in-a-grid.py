@@ -1,6 +1,6 @@
 class Solution:
 	def minCost(self, grid: list[list[int]]) -> int:
-		
+			
 		return 1
 		
 s = Solution()
