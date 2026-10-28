@@ -1,7 +1,7 @@
 class Solution:
     def minCost(self, grid: list[list[int]]) -> int:
 		# print(grid)
-		return
+		return 1
 
 s = Solution()
 print(s.minCost([[1,2],[3,4]]))
