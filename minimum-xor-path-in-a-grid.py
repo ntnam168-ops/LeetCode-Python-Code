@@ -14,8 +14,8 @@ class Solution:
 				elif not j:
 					for val in dp[i - 1][j]:
 						dp[i][j].add(val ^ grid[i][j])
-				else:
-					;
+				# else:
+					
 		return 1
 		
 s = Solution()
