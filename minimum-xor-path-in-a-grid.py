@@ -2,7 +2,7 @@ class Solution:
 	def minCost(self, grid: list[list[int]]) -> int:
 		n = len(grid)
 		m = len(grid[0])
-		dp = [set() * m for _ in range(n)]
+		dp = [set() * m] # for _ in range(n)]
 		print(dp)
 		return 1
 		
