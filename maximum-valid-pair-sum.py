@@ -3,5 +3,11 @@ class Solution:
         n = len(nums)
         res = 0, pointer = 0
         for i in range(n):
-        
+        	while i >= k:
+        		if nums[i - k] > nums[pointer]:
+        		pointer = i - k
+        	res = max(res, a[i] + a[pointer])
         return res
+        
+s = Solution()
+print(s.maxValidPairSum([1, 2, 3, 4], 2))
