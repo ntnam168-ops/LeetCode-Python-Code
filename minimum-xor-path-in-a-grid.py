@@ -8,14 +8,12 @@ class Solution:
 			for j in range(0, m):
 				if not i and not j:
 					continue
-				if not i:
-					for val in dp[i][j - 1]:
-						dp[i][j].add(val ^ grid[i][j])
-				elif not j:
+				if i:
 					for val in dp[i - 1][j]:
 						dp[i][j].add(val ^ grid[i][j])
-				# else:
-					
+				if j:
+					for val in dp[i][j - 1]:
+						dp[i][j].add(val ^ grid[i][j])					
 		return 1
 		
 s = Solution()
