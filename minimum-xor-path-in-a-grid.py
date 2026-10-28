@@ -15,7 +15,7 @@ class Solution:
 					for val in dp[i - 1][j]:
 						dp[i][j].add(val ^ grid[i][j])
 				else:
-				
+					;
 		return 1
 		
 s = Solution()
