@@ -6,7 +6,7 @@ class Solution:
         def back(pos, val):
             if pos == k + 1:
                 res.append(cur[:])
-                returaaaa
+                return
             
             for i in range(val, n - k + pos + 1):
                 cur[pos - 1] = i
