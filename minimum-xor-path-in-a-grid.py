@@ -1,5 +1,8 @@
 class Solution:
 	def minCost(self, grid: list[list[int]]) -> int:
+			n = len(grid)
+			m = len(grid[0])
+			dp = [set() * m for _ in range(n)]
 			
 		return 1
 		
