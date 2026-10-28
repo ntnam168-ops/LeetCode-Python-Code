@@ -1,5 +1,5 @@
 class Solution:
-    def countFairPairs(self, nums: List[int], lower: int, upper: int) -> int:
+    def countFairPairs(self, nums: list[int], lower: int, upper: int) -> int:
         n = len(nums)
         nums.sort()
         l, r = n - 1, n - 1
