@@ -7,6 +7,3 @@ class Solution:
 				pointer = i - k
 		res = max(res, nums[i] + nums[pointer])
 		return res
-
-s = Solution()
-print(s.maxValidPairSum([5, 1, 9], 1))
