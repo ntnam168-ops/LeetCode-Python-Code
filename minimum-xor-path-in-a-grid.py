@@ -3,7 +3,7 @@ class Solution:
 		n = len(grid)
 		m = len(grid[0])
 		dp = [[set() for _ in range(m)] for _ in range(n)]
-		print(dp)
+		dp[0][0].add(grid[0][0])
 		return 1
 		
 s = Solution()
