@@ -15,8 +15,3 @@ class Solution:
 					for val in dp[i][j - 1]:
 						dp[i][j].add(val ^ grid[i][j])					
 		return min(dp[n - 1][m - 1])
-		
-s = Solution()
-print(s.minCost([[1, 2], [3, 4]]))
-print(s.minCost([[6, 7], [5, 8]]))
-print(s.minCost([[2, 7, 5]]))
