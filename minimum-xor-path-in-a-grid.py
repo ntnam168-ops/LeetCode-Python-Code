@@ -3,5 +3,5 @@ class Solution:
 		print(grid)
 
 s = Solution()
-grid = list(map(list(map(int, input().split())), input().split()))
+grid = input()
 print(grid)
