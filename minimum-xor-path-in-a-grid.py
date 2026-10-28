@@ -14,7 +14,7 @@ class Solution:
 				if j:
 					for val in dp[i][j - 1]:
 						dp[i][j].add(val ^ grid[i][j])					
-		return 1
+		return min(dp[n - 1][m - 1])
 		
 s = Solution()
 print(s.minCost([[1, 2], [3, 4]]))
