@@ -129,7 +129,6 @@ class Solution:
 				else:
 					ans.append(True)
 					
-			print(tp, x, y)
 		return ans
 
 s = Solution()
