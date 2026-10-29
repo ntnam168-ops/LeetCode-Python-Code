@@ -26,6 +26,19 @@ class Solution:
 				dfs(v, u)
 			ou_[u] = idx
 	
+		def lca(u, v) -> int:
+			if h[u] < h[v]:
+				u, v = v, u
+			for i in range(15, -1, -1):
+				if pa[u][i] != -1 and h[pa[u][i]] >= h[v]:
+					pa = pa[u][i]
+			if u == v:
+				return u
+			for i in range(15, -1, -1):
+				if pa[u][i] != pa[v][i]:
+					u, v = pa[u][i], pa[v][i]
+			return pa[u][0]
+				
 		h[0] = 1
 		dfs(0, 0)
 		
