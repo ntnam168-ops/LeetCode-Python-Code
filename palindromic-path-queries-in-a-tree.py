@@ -119,7 +119,7 @@ class Solution:
 				x = int(x)
 				y = int(y)
 				
-			print(ty, x, y)
+			print(tp, x, y)
 			
 		return 1
 
