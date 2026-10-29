@@ -79,7 +79,7 @@ class Solution:
 			update(node * 2 + 1, l, md, x, y, pos, val)
 			update(node * 2 + 2, md + 1, r, x, y, pos, val)
 		
-		def get(node, l, r, pos) -> list[int]:
+		def get(node, l, r, pos) -> int:
 			push(node, l, r)
 			
 			if l == r:
@@ -89,7 +89,7 @@ class Solution:
 			
 			if md >= pos:
 				return get(node * 2 + 1, l, md, pos)
-			return get(node * 2 + 2, md + 1, r, pos)\
+			return get(node * 2 + 2, md + 1, r, pos)
 
 		ans = []
 		
