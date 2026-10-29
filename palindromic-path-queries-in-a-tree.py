@@ -114,8 +114,8 @@ class Solution:
 		
 		build(0, 0, n - 1)	
 		
-		for s in queries:
-			tp, x, y = s.split()
+		for que in queries:
+			tp, x, y = que.split()
 			if tp == "update":
 				x = int(x)
 				update(0, 0, n - 1, in_[x], ou_[x], ord(s[x]) - ord('a'), -1)
