@@ -52,8 +52,8 @@ class Solution:
 				
 		h[0] = 1
 		dfs(0, 0)
-		
 		ST = [[0] * 26 for _ in range(4 * n)]
+		print(ST[n - 1][0])
 		
 		return 1
 
