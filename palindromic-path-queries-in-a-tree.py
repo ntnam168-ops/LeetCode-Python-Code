@@ -80,6 +80,8 @@ class Solution:
 			if l > y or r < x:
 				return
 			if l >= x and r <= y:
+				if x == 2 and y == 2:
+					print(node, l, r)
 				lz[node][pos] += val
 				return
 			
