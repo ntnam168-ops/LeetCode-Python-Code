@@ -64,24 +64,34 @@ class Solution:
 			if l == r:
 				seg[node][ord(t[l]) - ord('a')] = 1
 				return
+				
 			md = (l + r) // 2
 			build(node * 2, l, md)
 			build(node * 2 + 1, md + 1, r)
-			for i in range(26):
-				seg[node][i] = seg[node * 2][i] + seg[node * 2 + 1][i]
+			sg[node] = mer(sg[node * 2], sg[node * 2 + 1])
 			
 		def push(node, l, r):
 			if l != r:
 				for i in range(26):
 					lz[node * 2][i] += lz[node][i]
 					lz[node * 2 + 1][i] += lz[node][i]
+					
 			for i in range(26):
 				sg[node][i] += lz[node][i]
 				lz[node][i] = 0
 				 
-		def update(node, l, r, x, y, pos):
+		def update(node, l, r, x, y, pos, val):
 			push(node, l, r)
+			if l > y or r < x:
+				return
+			if l >= x and r <= y:
+				lz[node][pos] += val
+				return
 			
+			md = (l + r) // 2
+			update(node * 2, l, md, x, y, pos, val)
+			update(node * 2 + 1, md + 1, r, x, y, pos, val)
+			sg[node] = mer(sg[node * 2], sg[node * 2 + 1])
 		
 		build(0, 0, n - 1)	
 		
