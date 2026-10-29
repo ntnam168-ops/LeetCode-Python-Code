@@ -54,6 +54,7 @@ class Solution:
 		dfs(0, 0)
 		ST = [[0] * 26 for _ in range(4 * n)]
 		
+		print(len(ST))
 		
 		return 1
 
