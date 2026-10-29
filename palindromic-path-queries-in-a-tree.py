@@ -118,6 +118,9 @@ class Solution:
 			if tp == "update":
 				x = int(x)
 				val = ord(y) - ord('a')
+				update(0, 0, n - 1, in_[x], ou_[x], ord(s[x]) - ord('a'), -1)
+				s[x] = y
+				update(0, 0, n - 1, in_[x], ou_[x], ord(s[x]) - ord('a'), 1)
 				
 			print(tp, x, y)
 			
