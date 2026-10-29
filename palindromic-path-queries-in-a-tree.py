@@ -81,8 +81,6 @@ class Solution:
 				return
 			if l >= x and r <= y:
 				lz[node][pos] += val
-				# if x == 2 and y == 2:
-					# print(node, l, r, pos, val, lz[node][pos])
 				return
 			
 			md = (l + r) // 2
@@ -105,25 +103,6 @@ class Solution:
 		
 		for i in range(n):
 			update(0, 0, n - 1, in_[i], ou_[i], ord(s[i]) - ord('a'), 1)
-			# print(in_[i], ou_[i], ord(s[i]) - ord('a'), 1)
-			# print()
-			# print(lz[0])
-			# print(lz[1])
-			# print(lz[2])
-			# print(lz[3])
-			# print(lz[4])
-			# print()
-			# print(get(0, 0, n - 1, 0))
-			# print(get(0, 0, n - 1, 1))
-			# print(get(0, 0, n - 1, 2))
-			# print()
-			# print(lz[0])
-			# print(lz[1])
-			# print(lz[2])
-			# print(lz[3])
-			# print(lz[4])
-			# print()
-		# return
 		
 		for que in queries:
 			tp, x, y = que.split()
