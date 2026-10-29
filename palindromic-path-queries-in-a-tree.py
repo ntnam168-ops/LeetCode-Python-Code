@@ -54,6 +54,12 @@ class Solution:
 		dfs(0, 0)
 		
 		for i in range(n):
+			for j in range(5):
+				print(i, j, pa[i][j])
+		
+		return 1
+		
+		for i in range(n):
 			for j in range(n):
 				print(i, j, lca(i, j))
 		
