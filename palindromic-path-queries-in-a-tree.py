@@ -56,6 +56,7 @@ class Solution:
 		lz = [[0] * 26 for _ in range(4 * n)]
 		t = s[:]
 		s = list(s)
+		t = list(t)
 			
 		for i in range(n):
 			t[in_[i]] = s[i]
