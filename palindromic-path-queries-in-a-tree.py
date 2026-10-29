@@ -118,7 +118,8 @@ class Solution:
 			if tp == 1:
 				x = int(x)
 				y = int(y)
-				print(x, y)
+				
+			print(ty, x, y)
 			
 		return 1
 
