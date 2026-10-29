@@ -115,6 +115,12 @@ class Solution:
 			print(get(0, 0, n - 1, 1))
 			print(get(0, 0, n - 1, 2))
 			print()
+			print(lz[0])
+			print(lz[1])
+			print(lz[2])
+			print(lz[3])
+			print(lz[4])
+			print()
 		return
 		
 		for que in queries:
