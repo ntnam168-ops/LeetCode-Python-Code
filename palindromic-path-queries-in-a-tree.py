@@ -9,13 +9,13 @@ class Solution:
 			adj[u].append(v)
 			adj[v].append(u)
 			
-		idx, in_, ou_ = 0, [0] * n, [0] * n
+		idx, in_, ou_ = -1, [0] * n, [0] * n
 		h, pa = [0] * n, [[-1] * 16 for _ in range(n)]
 		
 		def dfs(u, p):
 			nonlocal idx
-			in_[u] = idx
 			idx += 1
+			in_[u] = idx
 			
 			for v in adj[u]:
 				if v == p:
