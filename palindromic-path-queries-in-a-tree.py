@@ -109,6 +109,7 @@ class Solution:
 			print(get(0, 0, n - 1, 1))
 			print(get(0, 0, n - 1, 2))
 			# print()
+		return
 		
 		for que in queries:
 			tp, x, y = que.split()
