@@ -69,7 +69,16 @@ class Solution:
 			build(node * 2 + 1, md + 1, r)
 			for i in range(26):
 				seg[node][i] = seg[node * 2][i] + seg[node * 2 + 1][i]
+			
+		def push(node, l, r):
+			if l != r:
+				for i in range(26):
+					lz[node * 2][i] += lz[node][i]
+					lz[node * 2 + 1][i] += lz[node][i]
 				 
+		def update(node, l, r, x, y, pos):
+			push(node, l, r)
+			
 		
 		build(0, 0, n - 1)	
 		
