@@ -71,6 +71,7 @@ class Solution:
 			if not max(lz[node]):
 				return
 				
+			print(lz[node][0])
 			if l != r:
 				for i in range(26):
 					lz[node * 2][i] += lz[node][i]
