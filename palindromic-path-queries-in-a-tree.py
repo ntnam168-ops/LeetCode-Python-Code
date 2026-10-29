@@ -141,11 +141,10 @@ class Solution:
 				g1 = get(0, 0, n - 1, in_[x])
 				g2 = get(0, 0, n - 1, in_[y])
 				g3 = get(0, 0, n - 1, in_[p])
+				g1[ord(s[p]) - ord('a')] += 1
 				print(g1)
 				print(g2)
 				print(g3)
-				print(ord(s[p]) - ord('a'))
-				g1[ord(s[p]) - ord('a')] += 1
 				res = 0
 								
 				for i in range(26):
