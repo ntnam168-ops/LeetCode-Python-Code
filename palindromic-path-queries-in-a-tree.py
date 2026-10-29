@@ -137,9 +137,9 @@ class Solution:
 					res += g1[i] & 1
 				
 				if res > 1:
-					ans.append(false)
+					ans.append(False)
 				else:
-					ans.append(true)
+					ans.append(True)
 					
 			print(tp, x, y)
 		return ans
