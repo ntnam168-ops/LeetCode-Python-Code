@@ -111,10 +111,6 @@ class Solution:
 				g2 = get(0, 0, n - 1, in_[y])
 				g3 = get(0, 0, n - 1, in_[p])
 				res = g1 ^ g2 ^ g3 ^ (1 << (ord(s[p]) - ord('a')))
-								
-				for i in range(26):
-					g1[i] = g1[i] + g2[i] - 2 * g3[i]
-					res += g1[i] & 1
 				
 				if res > 1:
 					ans.append(False)
