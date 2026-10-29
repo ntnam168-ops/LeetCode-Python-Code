@@ -113,7 +113,8 @@ class Solution:
 		
 		build(0, 0, n - 1)	
 		for s in queries:
-			print(s)
+			tp, x, y = s.split()
+			print(ty, x, y)
 		
 		return 1
 
