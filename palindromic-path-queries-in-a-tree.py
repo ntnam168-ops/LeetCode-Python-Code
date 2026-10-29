@@ -61,13 +61,14 @@ class Solution:
 			t[in_[i]] = s[i]
 			
 		def push(node, l, r):
-			if not max(lz[node]) or l == r:
+			if l == r:
 				return
 				
 			for i in range(26):
-				lz[node * 2 + 1][i] += lz[node][i]
-				lz[node * 2 + 2][i] += lz[node][i]
-				lz[node][i] = 0
+				if lz[node][i]:
+					lz[node * 2 + 1][i] += lz[node][i]
+					lz[node * 2 + 2][i] += lz[node][i]
+					lz[node][i] = 0
 					 
 		def update(node, l, r, x, y, pos, val):
 			if l > y or r < x:
