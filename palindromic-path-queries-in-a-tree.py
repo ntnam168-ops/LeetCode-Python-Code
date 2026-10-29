@@ -8,6 +8,7 @@ class Solution:
 			adj[u].append(v)
 			adj[v].append(u)
 		idx, in_, ou_ = 0, [0] * n, [0] * n
+		height, pa = [0] * n, [[0] * 16 for _ in range(n)]
 		
 		def dfs(u, p):
 			nonlocal idx
@@ -20,6 +21,9 @@ class Solution:
 			ou_[u] = idx
 	
 		dfs(0, 0)
+		
+		
+		
 		return 1
 
 s = Solution()
