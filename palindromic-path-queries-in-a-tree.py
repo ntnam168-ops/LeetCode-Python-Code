@@ -60,7 +60,7 @@ class Solution:
 		
 		def build(node, l, r):
 			if l == r:
-				seg[node][ord(s[l]) - ord('a')] = 1
+				seg[node][ord(t[l]) - ord('a')] = 1
 				return
 			md = (l + r) // 2
 			build(node * 2, l, md)
