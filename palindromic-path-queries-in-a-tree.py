@@ -75,6 +75,9 @@ class Solution:
 				for i in range(26):
 					lz[node * 2][i] += lz[node][i]
 					lz[node * 2 + 1][i] += lz[node][i]
+			for i in range(26):
+				st[node][i] += lz[node][i]
+				lz[node][i] = 0
 				 
 		def update(node, l, r, x, y, pos):
 			push(node, l, r)
