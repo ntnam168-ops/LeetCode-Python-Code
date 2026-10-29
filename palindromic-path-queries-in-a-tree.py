@@ -77,7 +77,6 @@ class Solution:
 					 
 		def update(node, l, r, x, y, pos, val):
 			push(node, l, r)
-			print(node, l, r, x, y)
 			if l > y or r < x:
 				return
 			if l >= x and r <= y:
