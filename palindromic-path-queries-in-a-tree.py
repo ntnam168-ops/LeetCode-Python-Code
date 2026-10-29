@@ -16,9 +16,6 @@ class Solution:
 				dfs(v, u)
 			ou[u] = idx
 		
-		# def build(id, l, r):
-		# return
-		
 		dfs(0, 0)
     	
 s = Solution()
