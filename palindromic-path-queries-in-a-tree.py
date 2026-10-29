@@ -82,15 +82,15 @@ class Solution:
 		
 		def get(node, l, r, pos) -> list[int]:
 			push(node, l, r)
-			if l > pos or r < pos:
-				return [0] * 26
 			
 			if l == r:
 				return lz[node][:]
 				
 			md = (l + r) // 2
 			
-			return mer(get(node * 2 + 1, l, md, pos), get(node * 2 + 2, md + 1, r, pos))
+			if md >= pos:
+				return get(node * 2 + 1, l, md, pos)
+			return get(node * 2 + 2, md + 1, r, pos)\
 
 		ans = []
 		
