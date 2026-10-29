@@ -6,8 +6,7 @@ class Solution:
         	adj[v].append(u)
 	
         idx, in_, ou_ = 0, [0] * n, [0] * n
-    	
-		def dfs(u, p):
+    	def dfs(u, p):
 			in_[u] = idx
 			idx += 1
 			for v in g[u]:
