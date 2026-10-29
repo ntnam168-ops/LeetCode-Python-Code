@@ -110,6 +110,7 @@ class Solution:
 			print(lz[2])
 			print(lz[3])
 			print(lz[4])
+			print()
 			print(get(0, 0, n - 1, 0))
 			print(get(0, 0, n - 1, 1))
 			print(get(0, 0, n - 1, 2))
