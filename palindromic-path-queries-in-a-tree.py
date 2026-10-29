@@ -36,7 +36,7 @@ class Solution:
 		def lca(u, v) -> int:
 			if h[u] < h[v]:
 				u, v = v, u
-			return 1
+				
 			for i in range(15, -1, -1):
 				if pa[u][i] != -1 and h[pa[u][i]] >= h[v]:
 					pa = pa[u][i]
