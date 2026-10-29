@@ -109,8 +109,7 @@ class Solution:
 				p = lca(x, y)
 				g1 = get(0, 0, n - 1, in_[x])
 				g2 = get(0, 0, n - 1, in_[y])
-				g3 = get(0, 0, n - 1, in_[p])
-				res = g1 ^ g2 ^ g3 ^ (1 << (ord(s[p]) - ord('a')))
+				res = g1 ^ g2 ^ (1 << (ord(s[p]) - ord('a')))
 				
 				if res & (res - 1):
 					ans.append(False)
