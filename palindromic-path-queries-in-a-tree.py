@@ -91,8 +91,8 @@ class Solution:
 				return
 			
 			md = (l + r) // 2
-			update(node * 2, l, md, x, y, pos, val)
-			update(node * 2 + 1, md + 1, r, x, y, pos, val)
+			update(node * 2 + 1, l, md, x, y, pos, val)
+			update(node * 2 + 2, md + 1, r, x, y, pos, val)
 			sg[node] = mer(sg[node * 2], sg[node * 2 + 1])
 		
 		def get(node, l, r, pos) -> list[int]:
@@ -105,7 +105,7 @@ class Solution:
 				
 			md = (l + r) // 2
 			
-			return mer(get(node * 2, l, md, pos), get(node * 2 + 1, md + 1, r, pos))
+			return mer(get(node * 2 + 1, l, md, pos), get(node * 2 + 2, md + 1, r, pos))
 
 		ans = []
 		
