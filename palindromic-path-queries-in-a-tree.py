@@ -96,7 +96,7 @@ class Solution:
 				return [0] * 26
 			
 			if l == r:
-				return sg[node]
+				return lz[node]
 				
 			md = (l + r) // 2
 			
