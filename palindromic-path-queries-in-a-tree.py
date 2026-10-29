@@ -142,9 +142,6 @@ class Solution:
 				g2 = get(0, 0, n - 1, in_[y])
 				g3 = get(0, 0, n - 1, in_[p])
 				g1[ord(s[p]) - ord('a')] += 1
-				print(g1)
-				print(g2)
-				print(g3)
 				res = 0
 								
 				for i in range(26):
