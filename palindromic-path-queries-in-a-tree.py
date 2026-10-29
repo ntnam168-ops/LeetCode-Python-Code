@@ -26,7 +26,7 @@ class Solution:
 				dfs(v, u)
 			ou_[u] = idx
 	
-		height[0] = 1
+		h[0] = 1
 		dfs(0, 0)
 		
 		
