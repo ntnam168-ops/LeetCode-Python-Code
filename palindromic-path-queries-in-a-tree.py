@@ -75,6 +75,7 @@ class Solution:
 					
 			for i in range(26):
 				sg[node][i] += lz[node][i]
+				print(node, l, r, i, sg[node][i])
 				lz[node][i] = 0
 				 
 		def update(node, l, r, x, y, pos, val):
