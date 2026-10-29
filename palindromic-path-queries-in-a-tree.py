@@ -123,3 +123,6 @@ class Solution:
 					ans.append(True)
 					
 		return ans
+		
+s = Solution()
+print(s.palindromePath(3, [[0,1],[1,2]], "aac", ["query 0 2","update 1 b","query 0 2"]))
