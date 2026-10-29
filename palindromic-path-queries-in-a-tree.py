@@ -83,6 +83,7 @@ class Solution:
 				return
 			if l >= x and r <= y:
 				lz[node][pos] += val
+				push(node, l, r)
 				return
 			
 			md = (l + r) // 2
