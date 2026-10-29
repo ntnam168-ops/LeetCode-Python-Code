@@ -112,6 +112,8 @@ class Solution:
 			print()
 			print(get(0, 0, n - 1, 1))
 			print()
+			
+		return
 		
 		for que in queries:
 			tp, x, y = que.split()
