@@ -17,6 +17,7 @@ class Solution:
 			ou[u] = idx
 	
 		dfs(0, 0)
+		return 1
 
 s = Solution()
 print(s.palindromePath(3, [[0, 1], [1, 2]], "aac", ["query 0 2", "update 1 b", "query 0 2"]))
