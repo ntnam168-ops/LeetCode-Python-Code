@@ -59,6 +59,11 @@ class Solution:
 		
 		for i in range(n):
 			t[in_[i]] = s[i]
+			
+		def mer(a, b):
+			for i in range(26):
+				a[i] += b[i]
+			return a
 		
 		def build(node, l, r):
 			if l == r:
