@@ -60,12 +60,6 @@ class Solution:
 		for i in range(n):
 			t[in_[i]] = s[i]
 			
-		def mer(a, b) -> list[int]:
-			for i in range(26):
-				a[i] += b[i]
-				
-			return a
-			
 		def push(node, l, r):
 			if not max(lz[node]) or l == r:
 				return
