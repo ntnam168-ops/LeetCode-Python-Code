@@ -116,12 +116,17 @@ class Solution:
 		
 		for que in queries:
 			tp, x, y = que.split()
+			
 			if tp == "update":
 				x = int(x)
 				update(0, 0, n - 1, in_[x], ou_[x], ord(s[x]) - ord('a'), -1)
 				s[x] = y[0]
 				update(0, 0, n - 1, in_[x], ou_[x], ord(s[x]) - ord('a'), 1)
-				
+			else:
+				x, y = int(x), int(y)
+				p = lca(x, y)
+				print(p)
+			
 			print(tp, x, y)
 			
 		return 1
