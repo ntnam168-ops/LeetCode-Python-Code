@@ -80,6 +80,7 @@ class Solution:
 			if l > y or r < x:
 				return
 			if l >= x and r <= y:
+				print(node, lz[node][pos])
 				lz[node][pos] += val
 				print(node, lz[node][pos])
 				return
