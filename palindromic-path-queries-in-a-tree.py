@@ -7,10 +7,13 @@ class Solution:
     	idx, in_, ou_ = 0, [0] * n, [0] * n
     	
     	def dfs(u, p):
+    		in_[u] = idx
+    		idx += 1
     		for v in g[u]:
     			if v == p:
     				continue
     			dfs(v, u)
+    		ou[u] = idx
     	
     	dfs(0, 0)
     	
