@@ -63,6 +63,7 @@ class Solution:
 		def mer(a, b) -> list[int]:
 			for i in range(26):
 				a[i] += b[i]
+				
 			return a
 		
 		def build(node, l, r):
@@ -97,6 +98,18 @@ class Solution:
 			update(node * 2, l, md, x, y, pos, val)
 			update(node * 2 + 1, md + 1, r, x, y, pos, val)
 			sg[node] = mer(sg[node * 2], sg[node * 2 + 1])
+		
+		def get(node, l, r, pos) -> list[int]:
+			push(node, l, r)
+			if l > pos or r < pos:
+				return [0] * 26
+			
+			if l == r:
+				return sg[node]
+				
+			md = (l + r) // 2
+			
+			return mer(get(node * 2, l, md, pos), get(node * 2 + 1, md + 1, r, pos))
 		
 		build(0, 0, n - 1)	
 		
