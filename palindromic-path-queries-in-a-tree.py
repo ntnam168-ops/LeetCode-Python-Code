@@ -101,9 +101,11 @@ class Solution:
 			md = (l + r) // 2
 			
 			return mer(get(node * 2, l, md, pos), get(node * 2 + 1, md + 1, r, pos))
-		
-		build(0, 0, n - 1)	
+
 		ans = []
+		
+		for i in range(n):
+			update(0, 0, n - 1, 0, in_[i], ord(s[x]) - ord('a'), 1)
 		
 		for que in queries:
 			tp, x, y = que.split()
