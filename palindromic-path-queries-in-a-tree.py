@@ -117,6 +117,7 @@ class Solution:
 			tp, x, y = s.split()
 			if tp == "update":
 				x = int(x)
+				val = ord(y) - ord('a')
 				
 			print(tp, x, y)
 			
