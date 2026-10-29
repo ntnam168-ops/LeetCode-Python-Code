@@ -105,9 +105,9 @@ class Solution:
 			update(0, 0, n - 1, in_[i], ou_[i], ord(s[i]) - ord('a'), 1)
 			print(in_[i], ou_[i], ord(s[i]) - ord('a'), 1)
 			# print()
-			print(get(0, 0, n - 1, 0))
-			print(get(0, 0, n - 1, 1))
-			print(get(0, 0, n - 1, 2))
+			# print(get(0, 0, n - 1, 0))
+			# print(get(0, 0, n - 1, 1))
+			# print(get(0, 0, n - 1, 2))
 			# print()
 		
 		for que in queries:
