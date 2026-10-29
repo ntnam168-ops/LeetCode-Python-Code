@@ -115,7 +115,7 @@ class Solution:
 		
 		for s in queries:
 			tp, x, y = s.split()
-			if tp == 1:
+			if tp == "update":
 				x = int(x)
 				y = int(y)
 				
