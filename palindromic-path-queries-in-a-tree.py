@@ -24,7 +24,7 @@ class Solution:
 				h[v] = h[u] + 1
 				pa[v][0] = u
 				
-				for i in range(16):
+				for i in range(1, 16):
 					pa[v][i] = pa[pa[v][i - 1]][i - 1]
 					if pa[v][i] == -1:
 						break
