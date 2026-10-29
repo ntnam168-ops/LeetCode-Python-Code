@@ -39,7 +39,7 @@ class Solution:
 				
 			for i in range(15, -1, -1):
 				if pa[u][i] != -1 and h[pa[u][i]] >= h[v]:
-					pa = pa[u][i]
+					u = pa[u][i]
 					
 			if u == v:
 				return u
