@@ -119,7 +119,7 @@ class Solution:
 			if tp == "update":
 				x = int(x)
 				update(0, 0, n - 1, in_[x], ou_[x], ord(s[x]) - ord('a'), -1)
-				s[x] = y
+				s[x] = y[0]
 				update(0, 0, n - 1, in_[x], ou_[x], ord(s[x]) - ord('a'), 1)
 				
 			print(tp, x, y)
