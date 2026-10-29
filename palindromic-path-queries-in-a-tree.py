@@ -52,7 +52,7 @@ class Solution:
 				
 		h[0] = 1
 		dfs(0, 0)
-		seg = [[0] * 26 for _ in range(4 * n)]
+		sg = [[0] * 26 for _ in range(4 * n)]
 		lz = [[0] * 26 for _ in range(4 * n)]
 		t = s[:]
 		t = list(t)
@@ -67,7 +67,7 @@ class Solution:
 		
 		def build(node, l, r):
 			if l == r:
-				seg[node][ord(t[l]) - ord('a')] = 1
+				sg[node][ord(t[l]) - ord('a')] = 1
 				return
 				
 			md = (l + r) // 2
