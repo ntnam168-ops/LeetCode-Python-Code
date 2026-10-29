@@ -55,7 +55,6 @@ class Solution:
 		sg = [[0] * 26 for _ in range(4 * n)]
 		lz = [[0] * 26 for _ in range(4 * n)]
 		t = s[:]
-		t = list(t)
 		s = list(s)
 			
 		for i in range(n):
