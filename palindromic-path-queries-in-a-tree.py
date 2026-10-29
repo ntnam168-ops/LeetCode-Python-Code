@@ -113,6 +113,7 @@ class Solution:
 			return mer(get(node * 2, l, md, pos), get(node * 2 + 1, md + 1, r, pos))
 		
 		build(0, 0, n - 1)	
+		ans = []
 		
 		for que in queries:
 			tp, x, y = que.split()
@@ -129,15 +130,19 @@ class Solution:
 				g2 = get(0, 0, n - 1, in_[y])
 				g3 = get(0, 0, n - 1, in_[p])
 				g1[ord(s[p]) - ord('a')] += 1
-							
+				res = 0
+								
 				for i in range(26):
 					g1[i] = g1[i] + g2[i] - 2 * g3[i]
-			
-				g1[ord(s[p]) - ord('a')] += 1
-			
+					res += g1[i] & 1
+				
+				if res > 1:
+					ans.append(False)
+				else:
+					ans.append(True)
+					
 			print(tp, x, y)
-		print()
-		return 1
+		return ans
 
 s = Solution()
 print(s.palindromePath(3, [[0, 1], [1, 2]], "aac", ["query 0 2", "update 1 b", "query 0 2"]))
