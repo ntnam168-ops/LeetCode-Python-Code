@@ -81,6 +81,7 @@ class Solution:
 				return
 			if l >= x and r <= y:
 				lz[node][pos] += val
+				print(node, pos)
 				return
 			
 			md = (l + r) // 2
