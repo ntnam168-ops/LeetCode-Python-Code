@@ -52,7 +52,7 @@ class Solution:
 				
 		h[0] = 1
 		dfs(0, 0)
-		lz = [[0] * 26 for _ in range(4 * n)]
+		lz = [0] * (4 * n)
 		t = s[:]
 		s = list(s)
 		t = list(t)
@@ -64,9 +64,9 @@ class Solution:
 			if l == r:
 				return
 				
-			lz[node * 2 + 1][i] ^= lz[node][i]
-			lz[node * 2 + 2][i] ^= lz[node][i]
-			lz[node][i] = 0
+			lz[node * 2 + 1] ^= lz[node]
+			lz[node * 2 + 2] ^= lz[node]
+			lz[node] = 0
 					 
 		def update(node, l, r, x, y, pos, val):
 			if l > y or r < x:
