@@ -95,7 +95,7 @@ class Solution:
 				return [0] * 26
 			
 			if l == r:
-				return lz[node]
+				return lz[node][:]
 				
 			md = (l + r) // 2
 			
@@ -141,9 +141,7 @@ class Solution:
 				g1 = get(0, 0, n - 1, in_[x])
 				g2 = get(0, 0, n - 1, in_[y])
 				g3 = get(0, 0, n - 1, in_[p])
-				print(g3)
 				g1[ord(s[p]) - ord('a')] += 1
-				print(g3)
 				print(g1)
 				print(g2)
 				print(g3)
