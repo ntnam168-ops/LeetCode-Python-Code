@@ -113,7 +113,7 @@ class Solution:
 		for i in range(n):
 			update(0, 0, n - 1, in_[i], ou_[i], ord(s[i]) - ord('a'), 1)
 			print(in_[i], ou_[i], ord(s[i]) - ord('a'), 1)
-			
+			continue
 			print()
 			print(get(0, 0, n - 1, 1))
 			print()
