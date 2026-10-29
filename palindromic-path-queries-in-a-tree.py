@@ -67,8 +67,7 @@ class Solution:
 			build(node * 2 + 1, md + 1, r)
 			for i in range(26):
 				seg[node][i] = seg[node * 2][i] + seg[node * 2 + 1][i]
-				
-		def update(node, l, r, x, 
+				 
 		
 		build(0, 0, n - 1)	
 		
