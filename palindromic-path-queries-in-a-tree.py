@@ -60,7 +60,7 @@ class Solution:
 		for i in range(n):
 			t[in_[i]] = s[i]
 			
-		def mer(a, b):
+		def mer(a, b) -> list[int]
 			for i in range(26):
 				a[i] += b[i]
 			return a
