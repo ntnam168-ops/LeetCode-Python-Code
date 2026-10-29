@@ -77,12 +77,10 @@ class Solution:
 					 
 		def update(node, l, r, x, y, pos, val):
 			print(node, l, r, x, y)
-			push(node, l, r)
 			if l > y or r < x:
 				return
 			if l >= x and r <= y:
 				lz[node][pos] += val
-				push(node, l, r)
 				return
 			
 			md = (l + r) // 2
