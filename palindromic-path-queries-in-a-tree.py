@@ -59,6 +59,8 @@ class Solution:
 		for i in range(n):
 			t[in_[i]] = s[i]
 		
+		print(t)
+		
 		def build(node, l, r):
 			if l == r:
 				seg[node][ord(t[l]) - ord('a')] = 1
