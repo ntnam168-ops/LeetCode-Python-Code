@@ -52,9 +52,19 @@ class Solution:
 				
 		h[0] = 1
 		dfs(0, 0)
-		ST = [[0] * 26 for _ in range(4 * n)]
+		seg = [[0] * 26 for _ in range(4 * n)]
+		lz = [[0] * 26 for _ in range(4 * n)]
 		
-		print(len(ST[0]))
+		def build(node, l, r):
+			if l == r:
+				seg[node][ord(s[l]) - ord('a')] = 1
+				return
+			md = (l + r) // 2
+			build(node * 2, l, md)
+			build(node * 2 + 1, md + 1, r)
+			for i in range(26):
+				seg[node][i] = seg[node * 2][i] + seg[node * 2 + 1][i]
+		build(0, 0, n - 1)	
 		
 		return 1
 
