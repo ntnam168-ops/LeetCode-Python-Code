@@ -4,7 +4,7 @@ class Solution:
         for [u, v] in edges:
         	adj[u].append(v)
         	adj[v].append(u)
-    	idx, in_, ou_ = 0, [0] * n, [0] * n
+    	# idx, in_, ou_ = 0, [0] * n, [0] * n
     	
     	def dfs(u, p):
     		in_[u] = idx
