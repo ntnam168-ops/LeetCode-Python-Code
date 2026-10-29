@@ -109,6 +109,8 @@ class Solution:
 			update(0, 0, n - 1, in_[i], ou_[i], ord(s[i]) - ord('a'), 1)
 			print(in_[i], ou_[i], ord(s[i]) - ord('a'), 1)
 		
+		print(get(0, 0, n - 1, 1))
+		
 		for que in queries:
 			tp, x, y = que.split()
 			
