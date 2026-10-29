@@ -112,6 +112,8 @@ class Solution:
 			return mer(get(node * 2, l, md, pos), get(node * 2 + 1, md + 1, r, pos))
 		
 		build(0, 0, n - 1)	
+		for s in queries:
+			print(s)
 		
 		return 1
 
