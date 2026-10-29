@@ -88,7 +88,6 @@ class Solution:
 			md = (l + r) // 2
 			update(node * 2 + 1, l, md, x, y, pos, val)
 			update(node * 2 + 2, md + 1, r, x, y, pos, val)
-			print(node, sg[node])
 		
 		def get(node, l, r, pos) -> list[int]:
 			push(node, l, r)
