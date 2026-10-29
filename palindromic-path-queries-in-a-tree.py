@@ -101,6 +101,7 @@ class Solution:
 				return [0] * 26
 			
 			if l == r:
+				print(node)
 				return sg[node]
 				
 			md = (l + r) // 2
