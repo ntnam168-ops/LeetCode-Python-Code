@@ -8,10 +8,10 @@ class Solution:
 		idx, in_, ou_ = 0, [0] * n, [0] * n
 		
 		def dfs(u, p):
-			nonlocal idx
+			nonlocal idx 
 			in_[u] = idx
 			idx += 1
-			for v in g[u]:
+			for v in adj[u]:
 				if v == p:
 					continue
 			dfs(v, u)
