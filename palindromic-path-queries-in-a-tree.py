@@ -136,8 +136,6 @@ class Solution:
 			else:
 				x, y = int(x), int(y)
 				p = lca(x, y)
-				# print(x, y, p)
-				# print(in_[x], in_[y], in_[p])
 				g1 = get(0, 0, n - 1, in_[x])
 				g2 = get(0, 0, n - 1, in_[y])
 				g3 = get(0, 0, n - 1, in_[p])
