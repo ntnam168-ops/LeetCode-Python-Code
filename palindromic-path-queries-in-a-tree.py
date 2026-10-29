@@ -125,7 +125,7 @@ class Solution:
 			else:
 				x, y = int(x), int(y)
 				p = lca(x, y)
-				print(p)
+				print(x, y, p)
 			
 			print(tp, x, y)
 			
