@@ -4,9 +4,11 @@ sys.setrecursionlimit(10 ** 5)
 class Solution:
 	def palindromePath(self, n: int, edges: list[list[int]], s: str, queries: list[str]) -> list[bool]:
 		adj = [[] for _ in range(n)]
+		
 		for [u, v] in edges:
 			adj[u].append(v)
 			adj[v].append(u)
+			
 		idx, in_, ou_ = 0, [0] * n, [0] * n
 		h, pa = [0] * n, [[-1] * 16 for _ in range(n)]
 		
@@ -14,16 +16,21 @@ class Solution:
 			nonlocal idx
 			in_[u] = idx
 			idx += 1
+			
 			for v in adj[u]:
 				if v == p:
 					continue
+					
 				h[v] = h[u] + 1
 				pa[v][0] = u
+				
 				for i in range(16):
 					pa[v][i] = pa[pa[v][i - 1]][i - 1]
 					if pa[v][i] == -1:
 						break
+						
 				dfs(v, u)
+				
 			ou_[u] = idx
 	
 		def lca(u, v) -> int:
