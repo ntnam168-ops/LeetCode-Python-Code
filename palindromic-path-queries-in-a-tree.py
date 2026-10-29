@@ -112,7 +112,7 @@ class Solution:
 				g3 = get(0, 0, n - 1, in_[p])
 				res = g1 ^ g2 ^ g3 ^ (1 << (ord(s[p]) - ord('a')))
 				
-				if res > 1:
+				if res & (res - 1):
 					ans.append(False)
 				else:
 					ans.append(True)
