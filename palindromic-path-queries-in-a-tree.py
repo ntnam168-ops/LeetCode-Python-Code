@@ -53,7 +53,9 @@ class Solution:
 		h[0] = 1
 		dfs(0, 0)
 		
-		
+		for i in range(n):
+			for j in range(n):
+				print(i, j, lca(i, j))
 		
 		return 1
 
