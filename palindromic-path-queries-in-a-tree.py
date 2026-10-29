@@ -88,7 +88,7 @@ class Solution:
 				return
 			if l >= x and r <= y:
 				lz[node][pos] += val
-				print(node, l, r, val)
+				# print(node, l, r, val)
 				push(node, l, r)
 				return
 			
