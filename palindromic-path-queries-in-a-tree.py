@@ -1,3 +1,6 @@
+import sys
+sys.setrecursionlimit(10 ** 5)
+
 class Solution:
 	def palindromePath(self, n: int, edges: list[list[int]], s: str, queries: list[str]) -> list[bool]:
 		adj = [[] for _ in range(n)]
