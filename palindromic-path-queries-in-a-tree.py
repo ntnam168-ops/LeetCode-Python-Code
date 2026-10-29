@@ -8,7 +8,7 @@ class Solution:
 			adj[u].append(v)
 			adj[v].append(u)
 		idx, in_, ou_ = 0, [0] * n, [0] * n
-		height, pa = [0] * n, [[-1] * 16 for _ in range(n)]
+		h, pa = [0] * n, [[-1] * 16 for _ in range(n)]
 		
 		def dfs(u, p):
 			nonlocal idx
@@ -17,7 +17,7 @@ class Solution:
 			for v in adj[u]:
 				if v == p:
 					continue
-				height[v] = heigh[u] + 1
+				h[v] = h[u] + 1
 				pa[v][0] = u
 				for i in range(16):
 					pa[v][i] = pa[pa[v][i - 1]][i - 1]
