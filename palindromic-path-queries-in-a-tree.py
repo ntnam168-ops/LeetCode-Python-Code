@@ -144,6 +144,7 @@ class Solution:
 				print(g1)
 				print(g2)
 				print(g3)
+				print(ord(s[p]) - ord('a'))
 				g1[ord(s[p]) - ord('a')] += 1
 				res = 0
 								
