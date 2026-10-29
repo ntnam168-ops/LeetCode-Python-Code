@@ -94,7 +94,7 @@ class Solution:
 		ans = []
 		
 		for i in range(n):
-			update(0, 0, n - 1, in_[i], ou_[i], ord(s[i]) - ord('a'), 1)
+			update(0, 0, n - 1, in_[i], ou_[i], 1 << (ord(s[i]) - ord('a')), 1)
 		
 		for que in queries:
 			tp, x, y = que.split()
