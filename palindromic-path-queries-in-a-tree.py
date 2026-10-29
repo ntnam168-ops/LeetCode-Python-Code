@@ -125,6 +125,3 @@ class Solution:
 					ans.append(True)
 					
 		return ans
-		
-s = Solution()
-print(s.palindromePath(9, [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8]], "cbabbabcb", ["update 7 c","update 3 c","query 3 6","update 5 a","query 0 3","query 4 0","update 4 c","query 5 0","query 3 3","update 8 c","query 2 2","query 4 1","update 0 c","update 0 b","update 5 a","update 7 b","update 0 c","query 7 0","query 8 7","query 6 1","query 1 8","update 7 c","update 1 b","update 8 a","query 8 2","update 2 c","query 2 2","update 1 b","update 7 a","update 8 a"]))
