@@ -110,8 +110,7 @@ class Solution:
 				g1 = get(0, 0, n - 1, in_[x])
 				g2 = get(0, 0, n - 1, in_[y])
 				g3 = get(0, 0, n - 1, in_[p])
-				g1[ord(s[p]) - ord('a')] += 1
-				res = 0
+				res = g1 ^ g2 ^ g3 ^ (1 << (ord(s[p]) - ord('a')))
 								
 				for i in range(26):
 					g1[i] = g1[i] + g2[i] - 2 * g3[i]
