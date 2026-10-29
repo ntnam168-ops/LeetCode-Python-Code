@@ -10,6 +10,7 @@ class Solution:
 		idx, in_, ou_ = 0, [0] * n, [0] * n
 		
 		def dfs(u, p):
+			print(u, p)
 			nonlocal idx
 			in_[u] = idx
 			idx += 1
