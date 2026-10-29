@@ -129,7 +129,7 @@ class Solution:
 				g1 = get(0, 0, n - 1, in_[x])
 				g2 = get(0, 0, n - 1, in_[y])
 				g3 = get(0, 0, n - 1, in_[p])
-				print(g1, g2, g3)
+				print(g1, g2, g3, step = '\n')
 				g1[ord(s[p]) - ord('a')] += 1
 				res = 0
 								
