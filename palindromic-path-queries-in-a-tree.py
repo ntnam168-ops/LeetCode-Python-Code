@@ -77,6 +77,7 @@ class Solution:
 					lz[node * 2 + 1][i] += lz[node][i]
 					
 			for i in range(26):
+					print(node, l, r, i, sg[node][i])
 				sg[node][i] += lz[node][i]
 				if lz[node][i]:
 					print(node, l, r, i, sg[node][i])
