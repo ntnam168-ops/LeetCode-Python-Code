@@ -54,6 +54,9 @@ class Solution:
 		dfs(0, 0)
 		seg = [[0] * 26 for _ in range(4 * n)]
 		lz = [[0] * 26 for _ in range(4 * n)]
+		t = s[:]
+		for i in range(n):
+			t[in_[i]] = s[i]
 		
 		def build(node, l, r):
 			if l == r:
@@ -64,6 +67,9 @@ class Solution:
 			build(node * 2 + 1, md + 1, r)
 			for i in range(26):
 				seg[node][i] = seg[node * 2][i] + seg[node * 2 + 1][i]
+				
+		def update(node, l, r, x, 
+		
 		build(0, 0, n - 1)	
 		
 		return 1
