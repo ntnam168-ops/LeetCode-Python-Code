@@ -123,8 +123,6 @@ class Solution:
 				for i in range(26):
 					g1[i] = g1[i] + g2[i] - 2 * g3[i]
 					res += g1[i] & 1
-					print(g1[i], end = " ")
-				print()
 				
 				if res > 1:
 					ans.append(False)
