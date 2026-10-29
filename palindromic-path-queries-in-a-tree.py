@@ -66,16 +66,6 @@ class Solution:
 				a[i] += b[i]
 				
 			return a
-		
-		def build(node, l, r):
-			if l == r:
-				sg[node][ord(t[l]) - ord('a')] = 1
-				return
-				
-			md = (l + r) // 2
-			build(node * 2, l, md)
-			build(node * 2 + 1, md + 1, r)
-			sg[node] = mer(sg[node * 2], sg[node * 2 + 1])
 			
 		def push(node, l, r):
 			if l != r:
