@@ -14,6 +14,9 @@ class Solution:
     				continue
     			dfs(v, u)
     		ou[u] = idx
+    		
+    	def build(id, l, r):
+    		return
     	
     	dfs(0, 0)
     	
