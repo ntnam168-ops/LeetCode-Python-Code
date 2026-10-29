@@ -17,7 +17,7 @@ class Solution:
 				if v == p:
 					continue
 				dfs(v, u)
-			ou[u] = idx
+			ou_[u] = idx
 	
 		dfs(0, 0)
 		return 1
