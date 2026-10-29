@@ -68,7 +68,7 @@ class Solution:
 			lz[node * 2 + 2] ^= lz[node]
 			lz[node] = 0
 					 
-		def update(node, l, r, x, y, pos, val):
+		def update(node, l, r, x, y, val):
 			if l > y or r < x:
 				return
 			if l >= x and r <= y:
@@ -76,8 +76,8 @@ class Solution:
 				return
 			
 			md = (l + r) // 2
-			update(node * 2 + 1, l, md, x, y, pos, val)
-			update(node * 2 + 2, md + 1, r, x, y, pos, val)
+			update(node * 2 + 1, l, md, x, y, val)
+			update(node * 2 + 2, md + 1, r, x, y, val)
 		
 		def get(node, l, r, pos) -> int:
 			push(node, l, r)
@@ -94,16 +94,16 @@ class Solution:
 		ans = []
 		
 		for i in range(n):
-			update(0, 0, n - 1, in_[i], ou_[i], 1 << (ord(s[i]) - ord('a')), 1)
+			update(0, 0, n - 1, in_[i], ou_[i], 1 << (ord(s[i]) - ord('a')))
 		
 		for que in queries:
 			tp, x, y = que.split()
 			
 			if tp == "update":
 				x = int(x)
-				update(0, 0, n - 1, in_[x], ou_[x], ord(s[x]) - ord('a'), -1)
+				update(0, 0, n - 1, in_[x], ou_[x], 1 << (ord(s[x]) - ord('a')))
 				s[x] = y[0]
-				update(0, 0, n - 1, in_[x], ou_[x], ord(s[x]) - ord('a'), 1)
+				update(0, 0, n - 1, in_[x], ou_[x], 1 << (ord(s[x]) - ord('a')))
 			else:
 				x, y = int(x), int(y)
 				p = lca(x, y)
