@@ -117,6 +117,8 @@ class Solution:
 			tp, x, y = s.split()
 			if tp == 1:
 				x = int(x)
+				y = int(y)
+				print(x, y)
 			
 		return 1
 
