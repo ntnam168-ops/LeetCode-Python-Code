@@ -64,11 +64,9 @@ class Solution:
 			if l == r:
 				return
 				
-			for i in range(26):
-				if lz[node][i]:
-					lz[node * 2 + 1][i] += lz[node][i]
-					lz[node * 2 + 2][i] += lz[node][i]
-					lz[node][i] = 0
+			lz[node * 2 + 1][i] ^= lz[node][i]
+			lz[node * 2 + 2][i] ^= lz[node][i]
+			lz[node][i] = 0
 					 
 		def update(node, l, r, x, y, pos, val):
 			if l > y or r < x:
