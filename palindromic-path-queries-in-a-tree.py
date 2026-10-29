@@ -3,22 +3,23 @@ class Solution:
         adj = [[] for _ in range(n)]
         for [u, v] in edges:
         	adj[u].append(v)
-        	adj[v].append(u)	
+        	adj[v].append(u)
+	
         idx, in_, ou_ = 0, [0] * n, [0] * n
     	
-    	def dfs(u, p):
-    		in_[u] = idx
-    		idx += 1
-    		for v in g[u]:
-    			if v == p:
-    				continue
-    			dfs(v, u)
-    		ou[u] = idx
-    		
-    	def build(id, l, r):
-    		return
-    	
-    	dfs(0, 0)
+		def dfs(u, p):
+			in_[u] = idx
+			idx += 1
+			for v in g[u]:
+				if v == p:
+					continue
+				dfs(v, u)
+			ou[u] = idx
+		
+		# def build(id, l, r):
+		# return
+		
+		dfs(0, 0)
     	
 s = Solution()
 print(s.palindromePath(3, [[0, 1], [1, 2]], "aac", ["query 0 2", "update 1 b", "query 0 2"]))
