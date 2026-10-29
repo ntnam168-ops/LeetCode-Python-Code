@@ -83,7 +83,7 @@ class Solution:
 			push(node, l, r)
 			
 			if l == r:
-				return lz[node][:]
+				return lz[node]
 				
 			md = (l + r) // 2
 			
