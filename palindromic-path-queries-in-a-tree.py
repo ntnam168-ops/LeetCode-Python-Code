@@ -143,6 +143,7 @@ class Solution:
 				g3 = get(0, 0, n - 1, in_[p])
 				print(g3)
 				g1[ord(s[p]) - ord('a')] += 1
+				print(g3)
 				print(g1)
 				print(g2)
 				print(g3)
