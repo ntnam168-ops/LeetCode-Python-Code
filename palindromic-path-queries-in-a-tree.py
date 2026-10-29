@@ -72,7 +72,7 @@ class Solution:
 			if l > y or r < x:
 				return
 			if l >= x and r <= y:
-				lz[node][pos] += val
+				lz[node] ^= val
 				return
 			
 			md = (l + r) // 2
