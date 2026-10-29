@@ -52,7 +52,6 @@ class Solution:
 				
 		h[0] = 1
 		dfs(0, 0)
-		sg = [[0] * 26 for _ in range(4 * n)]
 		lz = [[0] * 26 for _ in range(4 * n)]
 		t = s[:]
 		s = list(s)
