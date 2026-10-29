@@ -128,7 +128,7 @@ class Solution:
 				print(x, y, p)
 			
 			print(tp, x, y)
-			
+		print()
 		return 1
 
 s = Solution()
