@@ -1,6 +1,7 @@
 class Solution:
     def countBalancedPermutations(self, num: str) -> int:
-        return 1
+        mod = 10 ** 9 + 7
+        
         
 s = Solution()
 print(s.countBalancedPermutations("123"))
