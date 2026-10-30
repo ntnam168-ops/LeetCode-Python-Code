@@ -7,7 +7,7 @@ class Solution:
         if total & 1:
         	return 0
         
-        dp = [[0] * (n // 2) for _ in range(total // 2)]
+        dp = [[0] * (n // 2 + 1) for _ in range(total // 2 + 1)]
         
         
         return dp[total // 2][n // 2]
