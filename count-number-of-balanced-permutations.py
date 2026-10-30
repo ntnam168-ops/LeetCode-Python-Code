@@ -28,6 +28,9 @@ class Solution:
             for i in range(n, 0, -1):
                 inv[i - 1] = (inv[i] * i) % mod
         
+        def C(n, k):
+        	return (gt[n] * gt[k] * gt[n - k]) % mod
+        
         init()
         for c in num:
         	cnt[int(c)] += 1
