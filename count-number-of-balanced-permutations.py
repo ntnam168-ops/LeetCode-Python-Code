@@ -2,6 +2,7 @@ class Solution:
     def countBalancedPermutations(self, num: str) -> int:
         mod = 10 ** 9 + 7
         total = 0
+        nums = list(nums)
         for c in nums:
         	total += ord(c) - ord('0')
         if total & 1:
