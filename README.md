@@ -10,10 +10,10 @@ This repository is a collection of accepted solutions from my problem-solving jo
 
 | Difficulty | Problems Solved |
 |:---:|:---:|
-| 🟢 Easy | 1 |
+| 🟢 Easy | 7 |
 | 🟡 Medium | 4 |
 | 🔴 Hard | 1 |
-| **Total** | **6** |
+| **Total** | **12** |
 
 <!-- STATS:END -->
 
