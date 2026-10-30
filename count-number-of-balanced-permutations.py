@@ -38,6 +38,8 @@ class Solution:
         	for t in range(1, cnt[val] + 1):
         		if t > n // 2:
         			break
-        		for i in range(total // 2 + 1):
-        
+        		for i in range(val * t, total // 2 + 1):
+        			for j in range(t, n // 2 + 1):
+	        			dp[i][j] += dp[i - val * t][j - t] * inv[j - t] * gt[j] * inv[t]
+						dp[i][j] %= mod
         return dp[total // 2][n // 2]
