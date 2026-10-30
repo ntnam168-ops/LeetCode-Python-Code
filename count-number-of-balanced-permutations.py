@@ -8,6 +8,8 @@ class Solution:
         	return 0
         
         dp = [[0] * (n // 2 + 1) for _ in range(total // 2 + 1)]
+        gt = [0] * (n + 1)
+        inv = [0] * (n + 1)
         cnt = [0] * 10
         dp[0][0] = 1
         
