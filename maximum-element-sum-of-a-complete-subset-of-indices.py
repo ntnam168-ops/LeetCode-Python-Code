@@ -8,6 +8,7 @@ class Solution:
         	for i in range(2, n + 1):
         		if not min_prime[i]:
         			prime.append(i)
+        			min_prime[i] = i
         		for x in prime:
         			if x * i > n or x > min_prime[i]:
         				break
