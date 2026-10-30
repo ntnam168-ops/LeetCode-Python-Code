@@ -34,10 +34,10 @@ class Solution:
         init()
         for c in num:
         	cnt[int(c)] += 1
-        # for val in range(10):
-        	# for t in range(cnt[val] + 1):
-        		# if t > n // 2:
-        			# break
-        		# for i in range(total // 2 + 1):
-        			# for j in range(t, )
+        for val in range(10):
+        	for t in range(1, cnt[val] + 1):
+        		if t > n // 2:
+        			break
+        		for i in range(total // 2 + 1):
+        
         return dp[total // 2][n // 2]
