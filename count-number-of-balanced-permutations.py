@@ -41,4 +41,5 @@ class Solution:
         		for i in range(val * t, total // 2 + 1):
         			for j in range(t, n // 2 + 1):
 	        			dp[i][j] += dp[i - val * t][j - t] * inv[j - t] * gt[j] * inv[t]
+	        			dp[i][j] %= mod
         return dp[total // 2][n // 2]
