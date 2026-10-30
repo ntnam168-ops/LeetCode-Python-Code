@@ -11,6 +11,9 @@ class Solution:
         cnt = [0] * 10
         dp[0][0] = 1
         
+        for c in num:
+        	cnt[int(c)] += 1
+        
         
         
         return dp[total // 2][n // 2]
