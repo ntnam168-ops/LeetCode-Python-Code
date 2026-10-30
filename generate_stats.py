@@ -3,7 +3,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 README = ROOT / "README.md"
 
-difficulties = ["Easy", "Medium", "Hard"]
+difficulties = ["1_Easy", "2_Medium", "3_Hard"]
 stats = {
     d: sum(p.is_file() for p in (ROOT / d).rglob("*"))
     if (ROOT / d).exists() else 0
@@ -15,9 +15,9 @@ total = sum(stats.values())
 table = [
     "| Difficulty | Problems Solved |",
     "|:---:|:---:|",
-    f"| 🟢 Easy | {stats['Easy']} |",
-    f"| 🟡 Medium | {stats['Medium']} |",
-    f"| 🔴 Hard | {stats['Hard']} |",
+    f"| 🟢 Easy | {stats['1_Easy']} |",
+    f"| 🟡 Medium | {stats['1_Medium']} |",
+    f"| 🔴 Hard | {stats['3_Hard']} |",
     f"| **Total** | **{total}** |"
 ]
 
