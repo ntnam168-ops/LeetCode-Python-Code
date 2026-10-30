@@ -42,6 +42,6 @@ class Solution:
 					for j in range(t, n // 2 + 1):
 						dp[i][j] += dp[i - val * t][j - t] * inv[j - t] * gt[j] * inv[t] * inv[cnt[val] - t]
 						dp[i][j] %= mod
-						cout << i << ' ' << j << ' ' << val << ' ' << t << ' ' << dp[i][j] << '\n';
+						print(i, j, val, t, dp[i][j])
 		dp[total // 2][n // 2] *= gt[n - n // 2]
 		return dp[total // 2][n // 2] % mod
