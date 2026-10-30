@@ -3,8 +3,6 @@ class Solution:
         mod = 10 ** 9 + 7
         total = sum(int(c) for c in num)
         
-        print(total)
-        
         if total & 1:
         	return 0
         return 1
