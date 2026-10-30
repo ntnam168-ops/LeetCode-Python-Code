@@ -14,7 +14,8 @@ class Solution:
         for c in num:
         	cnt[int(c)] += 1
         
-        
+        for i in range(10):
+        	
         
         return dp[total // 2][n // 2]
         
