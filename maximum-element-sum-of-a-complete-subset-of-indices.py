@@ -17,7 +17,7 @@ class Solution:
         
         init()
         for i in range(1, n + 1):
-        	val = nums[i - 1]
+        	val = i
         	cur = 1
         	while val > 1:
         		u = min_prime[val]
@@ -28,7 +28,7 @@ class Solution:
         		if cnt & 1:
         			cur *= u
         	
-        	ans[cur] += val
+        	ans[cur] += nums[i - 1]
         
         return max(ans)
            
