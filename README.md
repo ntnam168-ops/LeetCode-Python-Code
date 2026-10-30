@@ -9,11 +9,11 @@ This repository is a collection of accepted solutions from my problem-solving jo
 <!-- STATS:START -->
 
 | Difficulty | Problems Solved |
-|:---:|:---:|
-| 🟢 Easy | 0 |
+|:---:|---:|
+| 🟢 Easy | 1 |
 | 🟡 Medium | 0 |
 | 🔴 Hard | 0 |
-| **Total** | **0** |
+| **Total** | **1** |
 
 <!-- STATS:END -->
 
