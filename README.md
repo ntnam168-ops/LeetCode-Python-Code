@@ -12,8 +12,8 @@ This repository is a collection of accepted solutions from my problem-solving jo
 |:---:|:---:|
 | 🟢 Easy | 7 |
 | 🟡 Medium | 14 |
-| 🔴 Hard | 1 |
-| **Total** | **22** |
+| 🔴 Hard | 5 |
+| **Total** | **26** |
 
 <!-- STATS:END -->
 
