@@ -10,7 +10,6 @@ class Solution:
         inv = [0] * (n + 1)
         cnt = [0] * 10
         dp[0][0] = 1
-    
     	def pw(a, b) {
     		res = 1
     		while b:
