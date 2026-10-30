@@ -7,6 +7,7 @@ class Solution:
         	return 0
         	
         return 1
+        
 s = Solution()
 print(s.countBalancedPermutations("123"))
 print(s.countBalancedPermutations("112"))
