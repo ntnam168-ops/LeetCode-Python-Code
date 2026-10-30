@@ -35,10 +35,10 @@ class Solution:
 		for c in num:
 			cnt[int(c)] += 1
 		for val in range(10):
+			dp1 = [[0] * (n // 2 + 1) for _ in range(total // 2 + 1)]
 			for t in range(0, cnt[val] + 1):
 				if t > n // 2:
 					break			
-				dp1 = [[0] * (n // 2 + 1) for _ in range(total // 2 + 1)]
 				for i in range(val * t, total // 2 + 1):
 					for j in range(t, n // 2 + 1):
 						dp[i][j] += dp[i - val * t][j - t] * inv[j - t] * gt[j] * inv[t] * inv[cnt[val] - t]
