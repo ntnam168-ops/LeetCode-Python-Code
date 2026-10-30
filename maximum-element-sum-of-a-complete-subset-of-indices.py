@@ -15,7 +15,7 @@ class Solution:
         			min_prime[x * i] = x
         
         init()
-        for i in range(2, 21):
+        for i in range(2, n + 1):
         	print(i, min_prime[i])
         
 s = Solution()
