@@ -4,7 +4,7 @@ class Solution:
         min_prime = [0] * (n + 1)
         prime = []
         
-        def init() {
+        def init():
         	for i in range(2, n + 1):
         		if not min_prime[i]:
         			prime.append(i)
@@ -12,7 +12,6 @@ class Solution:
         			if x * i > n or x > min_prime[i]:
         				break
         			min_prime[x * i] = x
-        }
         
         init()
         for i in range(2, 21):
