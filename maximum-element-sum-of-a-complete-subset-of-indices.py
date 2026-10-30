@@ -31,7 +31,3 @@ class Solution:
         	ans[cur] += nums[i - 1]
         
         return max(ans)
-           
-s = Solution()
-print(s.maximumSum([8, 7, 3, 5, 7, 2, 4, 9]))
-print(s.maximumSum([8, 10, 3, 8, 1, 13, 7, 9, 4]))
