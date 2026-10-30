@@ -4,6 +4,9 @@ class Solution:
         total = 0
         for c in nums:
         	total += ord(c) - ord('0')
+        if total & 1:
+        	return 0
+        return 1
         
 s = Solution()
 print(s.countBalancedPermutations("123"))
