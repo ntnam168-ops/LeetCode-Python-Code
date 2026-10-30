@@ -29,9 +29,8 @@ class Solution:
         			cur *= u
         	
         	ans[cur] += val
-        		
-        res = 0
-        return res
+        
+        return max(ans)
            
 s = Solution()
 print(s.maximumSum([8, 7, 3, 5, 7, 2, 4, 9]))
