@@ -9,7 +9,8 @@ class Solution:
         
         dp = [[0] * (n // 2) for _ in range(total // 2)]
         
-        return 1
+        
+        return dp[total // 2][n // 2]
         
 s = Solution()
 print(s.countBalancedPermutations("123"))
