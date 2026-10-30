@@ -5,7 +5,6 @@ class Solution:
         
         if total & 1:
         	return 0
- 		return res
 s = Solution()
 print(s.countBalancedPermutations("123"))
 print(s.countBalancedPermutations("112"))
