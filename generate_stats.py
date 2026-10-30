@@ -16,7 +16,7 @@ table = [
     "| Difficulty | Problems Solved |",
     "|:---:|:---:|",
     f"| 🟢 Easy | {stats['1_Easy']} |",
-    f"| 🟡 Medium | {stats['1_Medium']} |",
+    f"| 🟡 Medium | {stats['2_Medium']} |",
     f"| 🔴 Hard | {stats['3_Hard']} |",
     f"| **Total** | **{total}** |"
 ]
