@@ -38,9 +38,10 @@ class Solution:
 			for t in range(1, cnt[val] + 1):
 				if t > n // 2:
 					break
-			for i in range(val * t, total // 2 + 1):
-				for j in range(t, n // 2 + 1):
-					dp[i][j] += dp[i - val * t][j - t] * inv[j - t] * gt[j] * inv[t]
-					dp[i][j] %= mod
-					print(val, t, i, j, dp[i][j])
-		return dp[total // 2][n // 2]
+				for i in range(val * t, total // 2 + 1):
+					for j in range(t, n // 2 + 1):
+						dp[i][j] += dp[i - val * t][j - t] * inv[j - t] * gt[j] * inv[t] * inv[cnt[val] - t]
+						dp[i][j] %= mod
+						cout << i << ' ' << j << ' ' << val << ' ' << t << ' ' << dp[i][j] << '\n';
+		dp[total // 2][n // 2] *= gt[n - n // 2]
+		return dp[total // 2][n // 2] % mod
