@@ -19,14 +19,22 @@ class Solution:
                 a = (a * a) % mod
                 b //= 2
             return res
-
+            
         def init():
-        	gt[0] = 1
-        	for i in range(1, n + 1):
-        		gt[i] = (gt[i - 1] * i) % mod
-        	inv[n] = pw(gt[n], mod - 2)
+            gt[0] = 1
+            for i in range(1, n + 1):
+                gt[i] = (gt[i - 1] * i) % mod
+            inv[n] = pw(gt[n], mod - 2)
             for i in range(n, 0, -1):
                 inv[i - 1] = (inv[i] * i) % mod
+                
+        # def init():
+        	# gt[0] = 1
+        	# for i in range(1, n + 1):
+        		# gt[i] = (gt[i - 1] * i) % mod
+        	# inv[n] = pw(gt[n], mod - 2)
+            # for i in range(n, 0, -1):
+                # inv[i - 1] = (inv[i] * i) % mod
         
         init()
         for c in num:
