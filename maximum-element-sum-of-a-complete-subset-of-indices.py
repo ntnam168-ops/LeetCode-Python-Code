@@ -2,6 +2,7 @@ class Solution:
     def maximumSum(self, nums: List[int]) -> int:
         n = len(nums)
         min_prime = [0] * (n + 1)
+        ans = [0] * (n + 1)
         prime = []
         
         def init():
@@ -17,7 +18,20 @@ class Solution:
         init()
         for i in range(1, n + 1):
         	val = nums[i - 1]
+        	cur = 1
+        	while val > 1:
+        		u = min_prime[val]
+        		cnt = 0
+        		while val % u == 0:
+        			val //= u
+        			cnt += 1
+        		if cnt & 1:
+        			cur *= u
         	
+        	ans[cur] += val
+        		
+        res = 0
+        return res
            
 s = Solution()
 print(s.maximumSum([8, 7, 3, 5, 7, 2, 4, 9]))
