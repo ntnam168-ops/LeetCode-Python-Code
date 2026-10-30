@@ -13,6 +13,10 @@ class Solution:
         cnt = [0] * 10
         dp[0][0] = 1
         
+        def init() {
+        	
+        }
+        
         for c in num:
         	cnt[int(c)] += 1
         
