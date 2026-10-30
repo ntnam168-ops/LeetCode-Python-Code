@@ -16,6 +16,7 @@ class Solution:
         
         init()
         for i in range(1, n + 1):
+        	val = nums[i - 1]
         	
            
 s = Solution()
