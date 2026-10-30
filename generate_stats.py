@@ -6,15 +6,15 @@ README = ROOT / "README.md"
 difficulties = ["Easy", "Medium", "Hard"]
 stats = {}
 
-for difficulty in difficulties:
-    folder = ROOT / difficulty
-    stats[difficulty] = len(list(folder.rglob("*.py"))) if folder.exists() else 0
+for d in difficulties:
+    folder = ROOT / d
+    stats[d] = len(list(folder.rglob("*.py"))) if folder.exists() else 0
 
 total = sum(stats.values())
 
 table = [
     "| Difficulty | Problems Solved |",
-    "|:---:|---:|",
+    "|:---:|:---:|",
     f"| 🟢 Easy | {stats['Easy']} |",
     f"| 🟡 Medium | {stats['Medium']} |",
     f"| 🔴 Hard | {stats['Hard']} |",

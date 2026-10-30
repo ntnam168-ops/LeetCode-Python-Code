@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'Easy/**'
+      - 'Medium/**'
+      - 'Hard/**'
+      - 'generate_stats.py'
+      - '.github/workflows/update_stats.yml'
+
   workflow_dispatch:
 
 permissions:
