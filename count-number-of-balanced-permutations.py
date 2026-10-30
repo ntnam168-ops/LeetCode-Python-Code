@@ -3,9 +3,11 @@ class Solution:
         mod = 10 ** 9 + 7
         total = sum(int(c) for c in num)
         
+        print(total)
+        
         if total & 1:
         	return 0
-        return 0
+        return 1
 s = Solution()
 print(s.countBalancedPermutations("123"))
 print(s.countBalancedPermutations("112"))
