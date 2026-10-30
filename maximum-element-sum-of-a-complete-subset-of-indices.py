@@ -15,7 +15,8 @@ class Solution:
         			min_prime[x * i] = x
         
         init()
-        
+        for i in range(1, n + 1):
+        	
            
 s = Solution()
 print(s.maximumSum([8, 7, 3, 5, 7, 2, 4, 9]))
