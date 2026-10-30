@@ -28,19 +28,19 @@ class Solution:
 			for i in range(n, 0, -1):
 				inv[i - 1] = (inv[i] * i) % mod
 
-def C(n, k):
-return (gt[n] * gt[k] * gt[n - k]) % mod
+		def C(n, k):
+			return (gt[n] * gt[k] * gt[n - k]) % mod
 
-init()
-for c in num:
-cnt[int(c)] += 1
-for val in range(10):
-for t in range(1, cnt[val] + 1):
-if t > n // 2:
-break
-for i in range(val * t, total // 2 + 1):
-for j in range(t, n // 2 + 1):
-dp[i][j] += dp[i - val * t][j - t] * inv[j - t] * gt[j] * inv[t]
-dp[i][j] %= mod
-print(val, t, i, j, dp[i][j])
-return dp[total // 2][n // 2]
+		init()
+		for c in num:
+			cnt[int(c)] += 1
+		for val in range(10):
+			for t in range(1, cnt[val] + 1):
+				if t > n // 2:
+					break
+			for i in range(val * t, total // 2 + 1):
+				for j in range(t, n // 2 + 1):
+					dp[i][j] += dp[i - val * t][j - t] * inv[j - t] * gt[j] * inv[t]
+					dp[i][j] %= mod
+					print(val, t, i, j, dp[i][j])
+		return dp[total // 2][n // 2]
