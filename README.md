@@ -11,9 +11,9 @@ This repository is a collection of accepted solutions from my problem-solving jo
 | Difficulty | Problems Solved |
 |:---:|:---:|
 | 🟢 Easy | 7 |
-| 🟡 Medium | 14 |
+| 🟡 Medium | 15 |
 | 🔴 Hard | 5 |
-| **Total** | **26** |
+| **Total** | **27** |
 
 <!-- STATS:END -->
 
